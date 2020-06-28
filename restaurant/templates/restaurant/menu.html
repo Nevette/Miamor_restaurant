@@ -1,10 +1,72 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Miamor restaurant - Menu</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap core JS with dependencies -->
+    <script src="{% static 'jquery-3.4.1.slim.min.js' %}" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="{% static 'popper.min.js' %}" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="{% static 'bootstrap.min.js' %}" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "main_page.css" %}">
+    <meta name="theme-color" content="#563d7c">
+
 </head>
 <body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'main' %}">Miamor restaurant</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'reservations' %}">Rezerwacje</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
+<main role="main">
+    <div class="container contact-style">
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette center-div">
+{#                       <div class="col-md-8"></div>#}
+{#             <img class=" card-img-top" width="20%" height="20%" src="{% static 'res1.jpg' %}">#}
+
+            <div class="col-md-6 text-center">
+                <h2 class="featurette-heading">Menu</h2>
+                <br>
+                <!-- <p class="lead">Prowadzimy telefoniczne rezerwacje pod numerem 123456789</p>
+                <p class="lead">Maksymalna liczba osób wynosi 10.</p>
+                <p class="lead">W przypadku nie zjawienia się na umówioną godzinę, rezerwacja zostaje anulowana po 15 minutach.</p> -->
+            </div>
+
+        </div>
+
+        <hr class="featurette-divider">
+
+    </div><!-- /.container -->
+
+    <footer class="container">
+        <p class="float-right"><a href="#">Powrót na górę</a></p>
+        <p class="text-center">&copy; Nevette {% now 'Y' %}
+    </footer>
+</main>
 </body>
 </html>
