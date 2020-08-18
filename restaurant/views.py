@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Product
 
 
 def home(request):
@@ -6,7 +7,8 @@ def home(request):
 
 
 def menu(request):
-    return render(request, 'restaurant/menu.html')
+    products = Product.objects
+    return render(request, 'restaurant/menu.html', {'products': products})
 
 
 def reservations(request):
